@@ -122,7 +122,7 @@ public class Dicegame {
 	
 	private static void easy (int roundcount, int player, int computer, int wins, int draws, int losses) {
 		
-		int roundcounter = roundcount;
+		int roundCounter = roundcount;
 		
 		for(int i = 0; roundcount > i; i++ ) {
 		System.out.println("you");
@@ -183,11 +183,11 @@ public class Dicegame {
            draws += 1;
           
 	}
-        roundcounter = roundcounter - 1;
+        roundCounter = roundCounter - 1;
         System.out.println("Wins: " +wins);
         System.out.println("Draws: " +draws);
         System.out.println("Losses: "+losses);
-        System.out.println("Rounds left: " + roundcounter);
+        System.out.println("Rounds left: " + roundCounter);
         System.out.println("");
 }
 		
@@ -196,7 +196,7 @@ public class Dicegame {
 }
 private static void normal (int roundcount, int player, int computer, int wins, int draws, int losses) {
 		
-		int kierroslaskuri = roundcount;
+		int roundCounter = roundcount;
 		
 		for(int i = 0; roundcount > i; i++ ) {
 		System.out.println("you");
@@ -247,11 +247,11 @@ private static void normal (int roundcount, int player, int computer, int wins, 
            draws += 1;
           
 	}
-        kierroslaskuri = kierroslaskuri - 1;
+        roundCounter = roundCounter - 1;
         System.out.println("Wins: " +wins);
         System.out.println("Draws: " +draws);
         System.out.println("Losses: "+losses);
-        System.out.println("Rounds left: " + kierroslaskuri);
+        System.out.println("Rounds left: " + roundCounter);
         System.out.println("");
 }
 		
@@ -259,11 +259,11 @@ private static void normal (int roundcount, int player, int computer, int wins, 
 		
 }
 
-private static void hard (int kierrosmaara, int player, int computer, int wins, int draws, int losses) {
+private static void hard (int roundCount, int player, int computer, int wins, int draws, int losses) {
 	
-	int kierroslaskuri = kierrosmaara;
+	int roundCounter = roundCount;
 	
-	for(int i = 0; kierrosmaara > i; i++ ) {
+	for(int i = 0; roundCount > i; i++ ) {
 	System.out.println("you");
     
     player = random();
@@ -325,11 +325,11 @@ private static void hard (int kierrosmaara, int player, int computer, int wins, 
        draws += 1;
       
 }
-    kierroslaskuri = kierroslaskuri - 1;
+    roundCounter = roundCounter - 1;
     System.out.println("Wins: " +wins);
     System.out.println("Draws: " +draws);
     System.out.println("Losses: "+losses);
-    System.out.println("Rounds left: " + kierroslaskuri);
+    System.out.println("Rounds left: " + roundCounter);
     System.out.println("");
 }
 	
