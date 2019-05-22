@@ -67,9 +67,6 @@ public class Dicegame { // Luokka jonka sisälle koko ohjelma rakentuu
 	 * @param draws      tasapelilaskin
 	 * @param losses     häviölaskin
 	 * @roundCounter kierroslaskin
-	 */
-	
-	/**
 	 * 
 	 * @param dicescore tarvitaan jotta saadaan helposti kahden nopan luvut laskettua yhteen
 	 * 
@@ -343,7 +340,7 @@ public class Dicegame { // Luokka jonka sisälle koko ohjelma rakentuu
 				two();
 				break;
 			case 3:
-				three();s
+				three();
 				break;
 			case 4:
 				four();
