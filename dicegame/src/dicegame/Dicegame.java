@@ -4,7 +4,259 @@ import java.util.Scanner;
 
 
 public class Dicegame {
+	private static int random() {
+		 Random r = new Random();
+		 int a = r.nextInt(6)+1;
+		 return a;
+	}
 	
+	private static void options() {
+		System.out.println("");
+		System.out.println("Choose difficulty: ");
+		System.out.println("1. Easy");
+		System.out.println("2. Normal");
+		System.out.println("3. Hard");
+		System.out.println("");
+	}
+	
+	private static void selectionMessage(int difficulty) {
+		
+
+		switch(difficulty) {
+		case 1:
+			System.out.println("You choosed 1. Easy");
+			break;
+		case 2:
+			System.out.println("You choosed 2. Normal");
+			break;
+		case 3:
+			System.out.println("You choosed 3. Hard");
+			break;
+		default:
+			System.out.println("You must choose difficulty between 1-3.");
+		}
+			
+	}
+	
+	private static void easy (int roundcount, int player, int computer, int wins, int draws, int losses) {
+		
+		int roundCounter = roundcount;
+		
+		for(int i = 0; roundcount > i; i++ ) {
+		System.out.println("you");
+       
+       player = random();
+       computer = random();
+       int dicescore = player;
+       
+		switch(player){
+          case 1: one();   break;
+          case 2: two();   break;
+          case 3: three(); break;
+          case 4: four();  break;
+          case 5: five();  break;
+          case 6: six();   break;
+       }
+		
+		player = random();
+		dicescore += player;
+		
+		switch(player){
+       case 1: one();   break;
+       case 2: two();   break;
+       case 3: three(); break;
+       case 4: four();  break;
+       case 5: five();  break;
+       case 6: six();   break;
+    }
+       System.out.println("\n");
+       System.out.println("computer");
+       
+      
+       
+       switch(computer){
+          case 1: one();   break;
+          case 2: two();   break;
+          case 3: three(); break;
+          case 4: four();  break;
+          case 5: five();  break;
+          case 6: six();   break;
+       }
+       
+       if(dicescore>computer){
+           System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
+           System.out.println("");
+           wins += 1;
+          
+       }
+       if(computer>dicescore){
+           System.out.println("\nYou lost :(, try harder please. ");
+           System.out.println("");
+           losses += 1;
+           
+       }
+       if(dicescore==computer){
+          System.out.println("\nDraw! What a joke. ");
+          System.out.println("");
+          draws += 1;
+         
+	}
+       roundCounter = roundCounter - 1;
+       System.out.println("Wins: " +wins);
+       System.out.println("Draws: " +draws);
+       System.out.println("Losses: "+losses);
+       System.out.println("Rounds left: " + roundCounter);
+       System.out.println("");
+}
+		
+	return;
+		
+}
+private static void normal (int roundcount, int player, int computer, int wins, int draws, int losses) {
+		
+		int roundCounter = roundcount;
+		
+		for(int i = 0; roundcount > i; i++ ) {
+		System.out.println("you");
+       
+       player = random();
+       computer = random();
+       int dicescore = player;
+       
+		switch(player){
+          case 1: one();   break;
+          case 2: two();   break;
+          case 3: three(); break;
+          case 4: four();  break;
+          case 5: five();  break;
+          case 6: six();   break;
+       }
+		
+	
+       System.out.println("\n");
+       System.out.println("computer");
+       
+      
+       
+       switch(computer){
+          case 1: one();   break;
+          case 2: two();   break;
+          case 3: three(); break;
+          case 4: four();  break;
+          case 5: five();  break;
+          case 6: six();   break;
+       }
+       
+       if(dicescore>computer){
+           System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
+           System.out.println("");
+           wins += 1;
+          
+       }
+       if(computer>dicescore){
+           System.out.println("\nYou lost :(, try harder please. ");
+           System.out.println("");
+           losses += 1;
+           
+       }
+       if(dicescore==computer){
+          System.out.println("\nDraw! What a joke. ");
+          System.out.println("");
+          draws += 1;
+         
+	}
+       roundCounter = roundCounter - 1;
+       System.out.println("Wins: " +wins);
+       System.out.println("Draws: " +draws);
+       System.out.println("Losses: "+losses);
+       System.out.println("Rounds left: " + roundCounter);
+       System.out.println("");
+}
+		
+	return;
+		
+}
+
+private static void hard (int roundCount, int player, int computer, int wins, int draws, int losses) {
+	
+	int roundCounter = roundCount;
+	
+	for(int i = 0; roundCount > i; i++ ) {
+	System.out.println("you");
+   
+   player = random();
+   computer = random();
+   int dicescore = computer;
+   
+	switch(player){
+      case 1: one();   break;
+      case 2: two();   break;
+      case 3: three(); break;
+      case 4: four();  break;
+      case 5: five();  break;
+      case 6: six();   break;
+   }
+	
+
+
+   System.out.println("\n");
+   System.out.println("computer");
+   
+  
+   
+   switch(computer){
+      case 1: one();   break;
+      case 2: two();   break;
+      case 3: three(); break;
+      case 4: four();  break;
+      case 5: five();  break;
+      case 6: six();   break;
+   }
+   
+   computer = random();
+   dicescore += computer;
+   
+   switch(computer){
+   case 1: one();   break;
+   case 2: two();   break;
+   case 3: three(); break;
+   case 4: four();  break;
+   case 5: five();  break;
+   case 6: six();   break;
+}
+   
+   if(player>dicescore){
+       System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
+       System.out.println("");
+       wins += 1;
+      
+   }
+   if(dicescore>player){
+       System.out.println("\nYou lost :(, try harder please. ");
+       System.out.println("");
+       losses += 1;
+       
+   }
+   if(dicescore==player){
+      System.out.println("\nDraw! What a joke. ");
+      System.out.println("");
+      draws += 1;
+     
+}
+   roundCounter = roundCounter - 1;
+   System.out.println("Wins: " +wins);
+   System.out.println("Draws: " +draws);
+   System.out.println("Losses: "+losses);
+   System.out.println("Rounds left: " + roundCounter);
+   System.out.println("");
+}
+	
+return;
+	
+}
+	
+
+
 	public static void six(){
 		   System.out.print("---------\n| *   * |\n| *   * |\n| *   * |\n---------\n");
 		}
@@ -84,257 +336,6 @@ public class Dicegame {
 	      main(null); 
 	}
 	}
-	
-	
-	private static int random() {
-		 Random r = new Random();
-		 int a = r.nextInt(6)+1;
-		 return a;
-	}
-	
-	private static void options() {
-		System.out.println("");
-		System.out.println("Choose difficulty: ");
-		System.out.println("1. Easy");
-		System.out.println("2. Normal");
-		System.out.println("3. Hard");
-		System.out.println("");
-	}
-	
-	private static void selectionMessage(int difficulty) {
-		
-
-		switch(difficulty) {
-		case 1:
-			System.out.println("You choosed 1. Easy");
-			break;
-		case 2:
-			System.out.println("You choosed 2. Normal");
-			break;
-		case 3:
-			System.out.println("You choosed 3. Hard");
-			break;
-		default:
-			System.out.println("You must choose difficulty between 1-3.");
-		}
-			
-	}
-	
-	private static void easy (int roundcount, int player, int computer, int wins, int draws, int losses) {
-		
-		int roundCounter = roundcount;
-		
-		for(int i = 0; roundcount > i; i++ ) {
-		System.out.println("you");
-        
-        player = random();
-        computer = random();
-        int dicescore = player;
-        
-		switch(player){
-           case 1: one();   break;
-           case 2: two();   break;
-           case 3: three(); break;
-           case 4: four();  break;
-           case 5: five();  break;
-           case 6: six();   break;
-        }
-		
-		player = random();
-		dicescore += player;
-		
-		switch(player){
-        case 1: one();   break;
-        case 2: two();   break;
-        case 3: three(); break;
-        case 4: four();  break;
-        case 5: five();  break;
-        case 6: six();   break;
-     }
-        System.out.println("\n");
-        System.out.println("computer");
-        
-       
-        
-        switch(computer){
-           case 1: one();   break;
-           case 2: two();   break;
-           case 3: three(); break;
-           case 4: four();  break;
-           case 5: five();  break;
-           case 6: six();   break;
-        }
-        
-        if(dicescore>computer){
-            System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
-            System.out.println("");
-            wins += 1;
-           
-        }
-        if(computer>dicescore){
-            System.out.println("\nYou lost :(, try harder please. ");
-            System.out.println("");
-            losses += 1;
-            
-        }
-        if(dicescore==computer){
-           System.out.println("\nDraw! What a joke. ");
-           System.out.println("");
-           draws += 1;
-          
-	}
-        roundCounter = roundCounter - 1;
-        System.out.println("Wins: " +wins);
-        System.out.println("Draws: " +draws);
-        System.out.println("Losses: "+losses);
-        System.out.println("Rounds left: " + roundCounter);
-        System.out.println("");
-}
-		
-	return;
-		
-}
-private static void normal (int roundcount, int player, int computer, int wins, int draws, int losses) {
-		
-		int roundCounter = roundcount;
-		
-		for(int i = 0; roundcount > i; i++ ) {
-		System.out.println("you");
-        
-        player = random();
-        computer = random();
-        int dicescore = player;
-        
-		switch(player){
-           case 1: one();   break;
-           case 2: two();   break;
-           case 3: three(); break;
-           case 4: four();  break;
-           case 5: five();  break;
-           case 6: six();   break;
-        }
-		
-	
-        System.out.println("\n");
-        System.out.println("computer");
-        
-       
-        
-        switch(computer){
-           case 1: one();   break;
-           case 2: two();   break;
-           case 3: three(); break;
-           case 4: four();  break;
-           case 5: five();  break;
-           case 6: six();   break;
-        }
-        
-        if(dicescore>computer){
-            System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
-            System.out.println("");
-            wins += 1;
-           
-        }
-        if(computer>dicescore){
-            System.out.println("\nYou lost :(, try harder please. ");
-            System.out.println("");
-            losses += 1;
-            
-        }
-        if(dicescore==computer){
-           System.out.println("\nDraw! What a joke. ");
-           System.out.println("");
-           draws += 1;
-          
-	}
-        roundCounter = roundCounter - 1;
-        System.out.println("Wins: " +wins);
-        System.out.println("Draws: " +draws);
-        System.out.println("Losses: "+losses);
-        System.out.println("Rounds left: " + roundCounter);
-        System.out.println("");
-}
-		
-	return;
-		
-}
-
-private static void hard (int roundCount, int player, int computer, int wins, int draws, int losses) {
-	
-	int roundCounter = roundCount;
-	
-	for(int i = 0; roundCount > i; i++ ) {
-	System.out.println("you");
-    
-    player = random();
-    computer = random();
-    int dicescore = computer;
-    
-	switch(player){
-       case 1: one();   break;
-       case 2: two();   break;
-       case 3: three(); break;
-       case 4: four();  break;
-       case 5: five();  break;
-       case 6: six();   break;
-    }
-	
-
- 
-    System.out.println("\n");
-    System.out.println("computer");
-    
-   
-    
-    switch(computer){
-       case 1: one();   break;
-       case 2: two();   break;
-       case 3: three(); break;
-       case 4: four();  break;
-       case 5: five();  break;
-       case 6: six();   break;
-    }
-    
-    computer = random();
-    dicescore += computer;
-    
-    switch(computer){
-    case 1: one();   break;
-    case 2: two();   break;
-    case 3: three(); break;
-    case 4: four();  break;
-    case 5: five();  break;
-    case 6: six();   break;
- }
-    
-    if(player>dicescore){
-        System.out.println("\nYou won, I bet it feels better than winning the lottery (: ");
-        System.out.println("");
-        wins += 1;
-       
-    }
-    if(dicescore>player){
-        System.out.println("\nYou lost :(, try harder please. ");
-        System.out.println("");
-        losses += 1;
-        
-    }
-    if(dicescore==player){
-       System.out.println("\nDraw! What a joke. ");
-       System.out.println("");
-       draws += 1;
-      
-}
-    roundCounter = roundCounter - 1;
-    System.out.println("Wins: " +wins);
-    System.out.println("Draws: " +draws);
-    System.out.println("Losses: "+losses);
-    System.out.println("Rounds left: " + roundCounter);
-    System.out.println("");
 }
 	
-return;
 	
-}
-	
-}
