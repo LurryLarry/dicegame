@@ -44,13 +44,13 @@ public class Dicegame { // Luokka jonka sisälle koko ohjelma rakentuu
 
 		switch (difficulty) {
 		case 1:
-			System.out.println("You choosed 1. Easy");
+			System.out.println("You chose 1. Easy");
 			break;
 		case 2:
-			System.out.println("You choosed 2. Normal");
+			System.out.println("You chose 2. Normal");
 			break;
 		case 3:
-			System.out.println("You choosed 3. Hard");
+			System.out.println("You chose 3. Hard");
 			break;
 		default:
 			System.out.println("You must choose difficulty between 1-3.");
